@@ -1,4 +1,4 @@
-package br.com.willams.datastructures;
+package br.com.willams.datastructures.linkedlist;
 
 
 public class LinkedList {

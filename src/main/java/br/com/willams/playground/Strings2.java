@@ -1,4 +1,4 @@
-package br.com.willams.stringnumbersandmath.duplicatechars;
+package br.com.willams.playground;
 
 import java.util.Map;
 import java.util.function.Function;

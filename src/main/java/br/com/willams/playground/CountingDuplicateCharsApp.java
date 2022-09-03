@@ -1,4 +1,4 @@
-package br.com.willams.stringsandarrays;
+package br.com.willams.playground;
 
 import java.util.HashMap;
 import java.util.Map;
