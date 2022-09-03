@@ -230,5 +230,4 @@ public class BinarySearchTreeImpl<T> implements BinarySearchTree<T> {
 		bst.remove(6, comparator);
 		strongRed("Now number 6" + (bst.search(6, comparator) ? FOUND_STRING: NOT_FOUND_STRING)).ln();
 	}
-
 }
