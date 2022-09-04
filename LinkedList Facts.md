@@ -18,7 +18,41 @@
 ![alt text](./images/single-linked-list.png)
 
 
-![alt text](https://gist.github.com/b6d4f78c7c7adbf0acc2abc0ad092184)
+https://github.com/osdeving/java-problems/blob/927aa6d5d3c08378a2f8f90357ddf5ada62e3f00/src/main/java/br/com/willams/datastructures/linkedlist/ListNode.java#L3-L6
+
+
+```java
+public class ListNode {
+    int data;
+    ListNode next;
+}
+```
+
+## Operações básicas
+
+- Percorrer
+- Inserir
+- Remover
+
+Uma vez que temos um ponteiro para o início da lista, basta acessar esse ponteiro, obter a informação ali presente e então repetir o processo para o próximo ponteiro.
+
+A inserção pode ocorrer no início, no meio ou no fim.
+
+## Inserção no Início
+
+![imagem não encontrada](./images/single-linked-list-new-node.png)
+
+![imagem não encontrada](./images/single-linked-list-update-head.png)
+
+![imagem não encontrada](./images/single-linked-list-update-new-node-next.png)
+
+
+
+
+
+
+
+
 
 
 
