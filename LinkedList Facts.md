@@ -18,7 +18,53 @@
 ![alt text](./images/single-linked-list.png)
 
 
-![alt text](https://gist.github.com/b6d4f78c7c7adbf0acc2abc0ad092184)
+Em java podemos representar um Node da seguinte forma:
+
+https://github.com/osdeving/java-problems/blob/927aa6d5d3c08378a2f8f90357ddf5ada62e3f00/src/main/java/br/com/willams/datastructures/linkedlist/ListNode.java#L3-L6
+
+
+## Operações básicas
+
+- Percorrer
+- Inserir
+- Remover
+
+### Percorrer a Lista
+
+Para percorrer a lista, uma vez que temos um ponteiro para o início da lista, basta acessar esse ponteiro, obter a informação ali presente e então repetir o processo para o próximo ponteiro.
+Veremos vários exemplos disso mais tarde.
+
+
+### Inserção
+
+A inserção pode ocorrer:
+
+- No Início
+- No Meio
+- No Fim.
+
+#### Inserção no Início
+
+Criando um novo nó
+
+![imagem não encontrada](./images/single-linked-list-new-node.png)
+
+Atualizando Head
+
+![imagem não encontrada](./images/single-linked-list-update-head.png)
+
+Atualizando next do novo nó
+
+![imagem não encontrada](./images/single-linked-list-update-new-node-next.png)
+
+
+
+
+
+
+
+
+
 
 
 
