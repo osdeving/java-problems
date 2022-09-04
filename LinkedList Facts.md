@@ -96,7 +96,9 @@ A imagem abaixo mostra visualmente o processo.
 
 ### Inserção: Show me the code!
 
+Segue abaixo o código de inserção. Note que para melhor entendimento você pode criar um método para cada tipo de inserção (início, meio e fim).
 
+https://github.com/osdeving/java-problems/blob/d8ab62495f4de9d7acd963d7c5cf2917fb106d73/src/main/java/br/com/willams/datastructures/linkedlist/SingleLinkedList.java#L20-L51
 
 
 
