@@ -22,6 +22,17 @@ Em java podemos representar um Node da seguinte forma:
 
 https://github.com/osdeving/java-problems/blob/927aa6d5d3c08378a2f8f90357ddf5ada62e3f00/src/main/java/br/com/willams/datastructures/linkedlist/ListNode.java#L3-L6
 
+A lista, por sua vez, pode ser representada assim:
+
+```java
+public class SingleLinkedList {
+    ListNode head;
+    
+    ... métodos da lista 
+}
+```
+
+> **Observação**: _Embora os exemplos estejam em Java, para evitar distrações, de início não teremos encapsulamento ou outras boas práticas de Linguagem Orientada a Objetos. Isso vai permitir reaproveitar o código em várias linguagens com sintaxe C-Like (JavaScript, C e C++ principalmente) com poucas modificações_.
 
 ## Operações básicas
 
