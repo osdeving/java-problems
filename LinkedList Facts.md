@@ -77,7 +77,24 @@ Atualizando next do novo nó
 
 
 
+### Inserção no Final
 
+Uma vez que você criou um novo nó (como no exemplo anterior), basta conectar o ponteiro "next" do último nó para o novo nó. É importante lembrar que só conseguimos alcançar o último nó percorrendo a lista até que "node.next" aponte para null. Podemos otimizar esse processo criando um ponteiro que sempre aponta para o último nó, mas por enquanto vamos manter o cenário mais simples.
+
+![imagem não encontrada](./images/single-linked-list-insert-last-pos.png)
+
+
+
+### Inserção no Meio
+
+Para inserir no meio da lista é necessário quebrar a ligação e reajustar os ponteiros para o novo nó. O ponteiro next do node deve apontar para o novo nó (rompendo a ligação com o  resto da lista) e o ponteiro next do novo nó de apontar para o antigo node next (ligando novamente o resto da lista, dessa vez no novo nó).
+
+A imagem abaixo mostra visualmente o processo. 
+
+![imagem não encontrada](./images/single-linked-list-insert-middle.png)
+
+
+### Inserção: Show me the code!
 
 
 
