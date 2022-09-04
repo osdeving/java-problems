@@ -18,7 +18,7 @@ public class BinarySearchTree {
 
 	protected Node root;
 
-	protected boolean nonRecursive = true;
+	protected boolean nonRecursive = false;
 
 	public static int PRE = 0;
 	public static int IN = 1;
@@ -185,17 +185,31 @@ public class BinarySearchTree {
 	}
 
 	public int min() {
-		return minNode(root);
-	}
-
-	public int minNode(Node node) {
-		var curr = node;
-
-		while (curr != null && curr.left != null) {
-			curr = curr.left;
+		if(root == null) {
+			throw new IllegalStateException("Chamando min() em uma árvore está vazia");
 		}
 
-		return curr.key;
+		if(nonRecursive)
+			return minNonRecursive(root);
+		else
+			return minNode(root);
+	}
+
+	//
+	// Time O(n) (pior caso, skew-tree) 
+	// Space O(n) (por causa do recursive stack)
+	//
+	public int minNode(Node root) {
+		if(root.left == null)
+			return root.key;
+		else
+			return minNode(root.left);
+	}
+
+	public int minNonRecursive(Node node) {
+		while(root.left != null) 
+			root = root.left;
+		return root.key;
 	}
 
 	public int max() {
@@ -225,6 +239,7 @@ public class BinarySearchTree {
 	// efetuando um possível zigue-zague. 'Possível', porque se a árvore estiver completamente desbalanceada (skew-tree)
 	// de fato será uma lista encadeada ordenada
 	//
+	// pior caso é O(n) (skew-tree) melhor caso O(logn) (complete-binary-tree)
 	boolean searchNodeNonRecursive(Node root, int key) {
 		while(root != null) {
 			if(key == root.key) 
@@ -241,18 +256,17 @@ public class BinarySearchTree {
 		return false;
 	}
 
-	protected boolean searchNode(Node node, int key) {
-		if (node == null) {
+	// pior caso é O(n) (skew-tree) melhor caso O(logn) (complete-binary-tree)
+	protected boolean searchNode(Node root, int key) {
+		if (root == null) 
 			return false;
-		}
-
-		if (key < node.key) {
-			return searchNode(node.left, key);
-		} else if (key > node.key) {
-			return searchNode(node.right, key);
-		} else {
+		
+		if (key < root.key) 
+			return searchNode(root.left, key);
+		else if (key > root.key) 
+			return searchNode(root.right, key);
+		else 
 			return true;
-		}
 	}
 
 	public void remove(int key) {
