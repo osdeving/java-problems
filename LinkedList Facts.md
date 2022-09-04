@@ -103,8 +103,13 @@ A remoção, assim como a inserção, pode ocorrer:
 
 #### Deletando o primeiro nó da Lista
 
+![imagem não encontrada](./images/single-linked-list-delete-first.png)
 
 
 
+### Remoção: Show me the code!
 
+Segue abaixo o código de remoção.
+
+https://github.com/osdeving/java-problems/blob/49bf5e089baf401a28fb3b6adf1287920db0a65e/src/main/java/br/com/willams/datastructures/linkedlist/SingleLinkedList.java#L63-L88
 
