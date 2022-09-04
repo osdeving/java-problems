@@ -48,10 +48,7 @@ Abaixo temos um exemplo para contar os elementos da lista. Ou seja, percorrer a 
 
 https://github.com/osdeving/java-problems/blob/07fd95cab4225404b7318691bdcf74a2213de8ad/src/main/java/br/com/willams/datastructures/linkedlist/SingleLinkedList.java#L8-L18
 
-
-
-
-### Inserção
+### Inserindo nós na Lista
 
 A inserção pode ocorrer:
 
@@ -72,10 +69,6 @@ Atualizando Head
 Atualizando next do novo nó
 
 ![imagem não encontrada](./images/single-linked-list-update-new-node-next.png)
-
-
-
-
 
 ### Inserção no Final
 
@@ -99,6 +92,17 @@ A imagem abaixo mostra visualmente o processo.
 Segue abaixo o código de inserção. Note que para melhor entendimento você pode criar um método para cada tipo de inserção (início, meio e fim).
 
 https://github.com/osdeving/java-problems/blob/d8ab62495f4de9d7acd963d7c5cf2917fb106d73/src/main/java/br/com/willams/datastructures/linkedlist/SingleLinkedList.java#L20-L51
+
+### Deletando nós da Lista
+
+A remoção, assim como a inserção, pode ocorrer:
+
+- No Início
+- No Meio
+- No Fim.
+
+#### Deletando o primeiro nó da Lista
+
 
 
 
