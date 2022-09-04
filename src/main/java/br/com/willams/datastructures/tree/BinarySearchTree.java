@@ -26,28 +26,37 @@ public class BinarySearchTree {
 	public static int LVL = 3;
 
 	public void insert(int key) {
-		if (root == null) {
-			root = new Node(key);
-		} else {
-			insertNode(root, key);
-		}
+		if(nonRecursive)
+			 insertNonRecursive(root, key);
+		else
+			this.root = insertNode(root, key);
 	}
 
-	private void insertNode(Node node, int key) {
-		if (key < node.key) {
-			if (node.left == null) {
-				node.left = new Node(key);
-			} else {
-				insertNode(node.left, key);
-			}
+	// Time O(n) | Space O(n) (para recursive stack) 
+	private Node insertNode(Node root, int key) {
+		if (root == null) 
+			root = new Node(key);
+		else if (key < root.key) 
+			root.left =	insertNode(root.left, key);
+		else if(key > root.key)
+			root.right = insertNode(root.right, key);
+		
+		return root;
+	}
 
-		} else {
-			if (node.right == null) {
-				node.right = new Node(key);
-			} else {
-				insertNode(node.right, key);
-			}
+	// Time O(n) | Space O(1)
+	private void insertNonRecursive(Node root, int key) {
+		while(root != null) {
+			if(key == root.key) 
+				return;
+
+			if(key > root.key) 
+				root = root.right;
+			else 
+				root = root.left;
 		}
+
+		root = new Node(key);
 	}
 
 	public void visit(int type) {
@@ -186,7 +195,7 @@ public class BinarySearchTree {
 
 	public int min() {
 		if(root == null) {
-			throw new IllegalStateException("Chamando min() em uma árvore está vazia");
+			throw new IllegalStateException("Chamando min() em uma árvore vazia");
 		}
 
 		if(nonRecursive)
@@ -195,10 +204,7 @@ public class BinarySearchTree {
 			return minNode(root);
 	}
 
-	//
-	// Time O(n) (pior caso, skew-tree) 
-	// Space O(n) (por causa do recursive stack)
-	//
+	// Time O(n) (pior caso, skew-tree) | Space O(n) (por causa do recursive stack)
 	public int minNode(Node root) {
 		if(root.left == null)
 			return root.key;
@@ -206,6 +212,7 @@ public class BinarySearchTree {
 			return minNode(root.left);
 	}
 
+	// Time O(n) (pior caso, skew-tree) | Space O(1) 
 	public int minNonRecursive(Node node) {
 		while(root.left != null) 
 			root = root.left;
@@ -213,17 +220,29 @@ public class BinarySearchTree {
 	}
 
 	public int max() {
-		return maxNode(root);
-	}
-
-	protected int maxNode(Node node) {
-		var curr = node;
-
-		while (curr != null && curr.right != null) {
-			curr = curr.right;
+		if(root == null) {
+			throw new IllegalStateException("Chamando max() em uma árvore vazia");
 		}
 
-		return curr.key;
+		if(nonRecursive)
+			return maxNonRecursive(root);
+		else
+			return maxNode(root);
+	}
+
+	// Time O(n)  (pior caso, skew-tree) | Space O(1)
+	protected int maxNonRecursive(Node root) {
+		while(root.right != null) 
+			root = root.right;
+		return root.key;
+	}
+
+	// Time O(n) (pior caso, skew-tree) | Space O(n) (por causa do recursive stack)
+	protected int maxNode(Node root) {
+		if(root.right == null)
+			return root.key;
+		else
+			return maxNode(root.right);
 	}
 
 	public boolean search(int key) {
