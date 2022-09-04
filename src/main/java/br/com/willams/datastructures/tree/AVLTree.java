@@ -9,7 +9,12 @@ public class AVLTree extends BinarySearchTree {
 			return -1;
 		}
 
-		return Math.max(height(node.left), height(node.right)) + 1;
+		int hl = height(node.left);
+		int hr = height(node.right);
+
+		int h = Math.max(hl, hr);
+
+		return h + 1;
 	}
 
 	public BalancedType balanceFactor(Node node) {
