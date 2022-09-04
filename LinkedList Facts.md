@@ -32,7 +32,12 @@ https://github.com/osdeving/java-problems/blob/927aa6d5d3c08378a2f8f90357ddf5ada
 ### Percorrer a Lista
 
 Para percorrer a lista, uma vez que temos um ponteiro para o início da lista, basta acessar esse ponteiro, obter a informação ali presente e então repetir o processo para o próximo ponteiro.
-Veremos vários exemplos disso mais tarde.
+
+Abaixo temos um exemplo para contar os elementos da lista. Ou seja, percorrer a lista até que o ponteiro next seja null.
+
+https://github.com/osdeving/java-problems/blob/07fd95cab4225404b7318691bdcf74a2213de8ad/src/main/java/br/com/willams/datastructures/linkedlist/SingleLinkedList.java#L8-L18
+
+
 
 
 ### Inserção
