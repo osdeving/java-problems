@@ -87,6 +87,14 @@ public class SingleLinkedList {
         previous.next = current.next;
     }
 
+    public void clear() {
+        // lol? esse é meu Java :D
+        this.head = null;
+
+        // Sinaliza pra rodar o Garbage Collector, mas não garante que vai rodar agora
+        System.gc();
+    }
+
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
 
@@ -95,6 +103,8 @@ public class SingleLinkedList {
         list.insert(7, 3);
         list.insert(4, 4);
 
+        System.out.println("Existem " + list.length() + " elementos na lista.");
+
         System.out.println("Imprimindo a lista: ");
         list.print();
 
@@ -102,5 +112,9 @@ public class SingleLinkedList {
 
         System.out.println("Removendo o nó da posição 2: ");
         list.print();
+
+        list.clear();
+
+        System.out.println("Existem " + list.length() + " elementos na lista.");
     }
 }
