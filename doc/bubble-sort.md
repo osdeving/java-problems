@@ -18,9 +18,6 @@ O algorítmo de ordenação  bubble (em português, bolha) tem esse nome porque 
 - para o pior caso (uma lista inversamente ordenada) haverá 1 troca por cada comparação
 
 
-
-
-
 ## Explicação
 
 Dada a sequência [99, 1, 3, 4], para levar o primeiro item uma casa para direita podemos fazer uma troca simples:

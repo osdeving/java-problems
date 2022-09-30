@@ -2,8 +2,9 @@
 
 ## Introdução
 
-O algorítmo de ordenação shell (shell sort, Shell é o nome do seu inventor, não tem significado além disso tipo 'concha' ou 'casca', esquerde :D).
-Ele melhora o insertion sort sendo assim uma "versão" do insertion sort.
+O algorítmo de ordenação Shell foi inventado por Donald Shell (daí o nome) e é derivado do insertion sort.
+Sabemos que o insertion sort funciona bem para entradas que já estão quase ordenadas. O shell  sort é um método que dá uma 'arrumada' no vetor de entrada antes de aplicar o insertion sort. Ou seja, ele ordena alguns elementos primeiro. Em vez de chamar o insertion sort comparando valores adjacentes, o algoritmo aplica uma ordenação pulando alguns valores. Por conta disso, o shell sort também é conhecido como um n-gap insertion sort.
+
 
 ## Teoria
 

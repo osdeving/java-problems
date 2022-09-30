@@ -1,4 +1,4 @@
-package br.com.willams.algoritms.sorting;
+package br.com.willams.algorithms.sorting;
 
 import java.util.Arrays;
 
